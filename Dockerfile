@@ -1,0 +1,5 @@
+FROM tomcat:10.1-jdk21
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY target/tp-finale.war /usr/local/tomcat/webapps/tp-finale.war
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
